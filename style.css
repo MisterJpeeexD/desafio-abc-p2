@@ -70,6 +70,12 @@ body {
   margin-top: 5px;
 }
 
+#randomColorsBtn{
+  padding: 20px 60px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
 #x, #y, #z, #filler-gif {
     grid-row-start: 5;
 }
@@ -84,3 +90,46 @@ body {
     
 
 /* <img src="https://media1.giphy.com/media/v1.Y2lkPTZjMDliOTUyMmZlZnd2Mzd5aHBidGxsN2lsbHBjbzgxaWF2c3dxdGdocDI5bm5zNiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/YQitE4YNQNahy/source.gif"> */
+
+/* Sticky navigation visual tweak */
+#mainNav {
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Footer */
+.site-footer {
+  background: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+  color: #333;
+}
+
+/* Home page layout: texto a la izquierda, imagen a la derecha */
+main .row img {
+  max-width: 100%;
+  height: auto;
+}
+
+main h1, main h2, main h3 {
+  color: #274e13;
+}
+
+@media (max-width: 767px) {
+  .parent {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Foro styles */
+#forum .card {
+  border-radius: 8px;
+}
+
+#postsList .card {
+  background: #ffffff;
+}
+
+#postsList p {
+  white-space: pre-wrap;
+}

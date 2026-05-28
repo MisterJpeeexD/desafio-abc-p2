@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Desafio ABC</title>
     <!-- Bootstrap -->
-    <link href="style.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="../style.css" rel="stylesheet" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,7 +17,7 @@
   <body class="container">
     <header>
       <h1 id="title" class="text-center">Desafio ABC</h1>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" id="mainNav">
         <div class="container-fluid">
           <button
             class="navbar-toggler"
@@ -43,7 +44,7 @@
                 <a class="nav-link" href="home.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="aboutUs.html">About Us</a>
+                <a class="nav-link" href="aboutus.html">About Us</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contactus.html">Contact Us</a>
@@ -53,13 +54,64 @@
         </div>
       </nav>
     </header>
+    <main class="my-4">
+      <div class="row align-items-start">
+        <div class="col-md-8">
+          <h1>Bienvenidos a The Blog Site ABC</h1>
+          <h2>Un espacio para compartir ideas</h2>
+          <p>
+            Somos un grupo de estudiantes creando este sitio como proyecto de
+            práctica. Aquí compartimos artículos, recursos y experiencias sobre
+            desarrollo web, diseño y buenas prácticas.
+          </p>
+          <h3>Temas principales</h3>
+          <ul>
+            <li>HTML y accesibilidad</li>
+            <li>CSS y diseño responsivo</li>
+            <li>JavaScript y dinámicas de usuario</li>
+          </ul>
+        </div>
+        <div class="col-md-4 text-center">
+          <img src="../img/m.jpeg" alt="Imagen blog" class="img-fluid rounded shadow">
+        </div>
+      </div>
+      <!-- Foro de discusión básico -->
+      <section id="forum" class="my-5">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Foro de discusión</h3>
+            <p class="card-text">Comparte ideas y comentarios con el equipo. Los mensajes se guardan en tu navegador (localStorage).</p>
+            <form id="forumForm" class="mb-3">
+              <div class="mb-2">
+                <label for="forumName" class="form-label">Nombre</label>
+                <input id="forumName" class="form-control" type="text" placeholder="Tu nombre (falso)">
+              </div>
+              <div class="mb-2">
+                <label for="forumMessage" class="form-label">Mensaje</label>
+                <textarea id="forumMessage" class="form-control" rows="3" placeholder="Escribe tu comentario aquí..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-success">Publicar</button>
+            </form>
+
+            <div id="postsList">
+              <!-- Posts aparecerán aquí -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <!-- Bootstrap -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <!-- Script Js -->
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
+
+    <footer class="site-footer text-center mt-4 py-3">
+      <div class="container">
+        <p><strong>Proyecto:</strong> The Blog Site ABC</p>
+        <p><strong>Autores:</strong> Aaron Guerra, Matias Arias, Jean Paul Santander, Marcos Galvez</p>
+        <p><strong>Contacto:</strong> contacto@blogabc.test</p>
+      </div>
+    </footer>
   </body>
 </html>
