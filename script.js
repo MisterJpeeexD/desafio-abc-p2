@@ -29,7 +29,6 @@ letters.forEach((element) => {
 const button = document.getElementById("randomColorsBtn");
 
 button.addEventListener("click", () => {
-
   // volver todo a verde
   letters.forEach((el) => {
     el.style.color = "rgb(70, 117, 0)";
@@ -71,7 +70,8 @@ function renderPosts() {
   if (!container) return;
   const posts = loadPosts();
   if (posts.length === 0) {
-    container.innerHTML = "<p class='text-muted'>Aún no hay mensajes. Sé el primero en publicar.</p>";
+    container.innerHTML =
+      "<p class='text-muted'>Aún no hay mensajes. Sé el primero en publicar.</p>";
     return;
   }
   container.innerHTML = posts
@@ -82,13 +82,13 @@ function renderPosts() {
     <div class="card mb-2" data-id="${p.id}">
       <div class="card-body">
         <div class="d-flex justify-content-between">
-          <strong>${escapeHtml(p.name || 'Anónimo')}</strong>
+          <strong>${escapeHtml(p.name || "Anónimo")}</strong>
           <small class="text-muted">${new Date(p.time).toLocaleString()}</small>
         </div>
         <p class="mt-2 mb-1">${escapeHtml(p.message)}</p>
         <div class="text-end"><button class="btn btn-sm btn-outline-danger delete-post">Eliminar</button></div>
       </div>
-    </div>`
+    </div>`,
     )
     .join("");
 
@@ -112,7 +112,12 @@ function deletePost(id) {
 function addPost(name, message) {
   if (!message || message.trim() === "") return;
   const posts = loadPosts();
-  posts.push({ id: Date.now(), name: name || 'Anónimo', message: message.trim(), time: Date.now() });
+  posts.push({
+    id: Date.now(),
+    name: name || "Anónimo",
+    message: message.trim(),
+    time: Date.now(),
+  });
   savePosts(posts);
   renderPosts();
 }
@@ -141,3 +146,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
