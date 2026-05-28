@@ -1,3 +1,7 @@
+#h5_sub{
+  margin: 0 100px
+}
+
 #title {
   text-align: center;
 }
@@ -7,6 +11,10 @@
 }
 
 .parent {
+  width: 90%;
+  height: 90%;
+  margin: 0 0 0 100px;
+  justify-content: center;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(5, 1fr);
@@ -14,7 +22,7 @@
   text-align: center;
   border: black solid 1px;
   border-radius: 5px;
-  box-shadow: 10px 10px 50px 0;
+  box-shadow: 10px 10px 10px 0;
 }
 
 .letter {
@@ -86,4 +94,12 @@ body {
 
 #filler-gif .letter{
     color: red !important; 
+}
+
+#footer-container{
+  text-align: start
+}
+
+.footer-text{
+  margin: 0
 }

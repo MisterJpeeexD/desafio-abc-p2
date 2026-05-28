@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 # Numero de tarea
 Tarea 1: Creacion desafio abc
 
-=======
->>>>>>> e4ab94971e62a9ea7838e6c69d17e02b2fc90804
 # Tareas
 Los nombres de la ramas deben de tener este formato A-F letra comienzo y letra fin
 
