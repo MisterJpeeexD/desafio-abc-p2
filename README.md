@@ -1,5 +1,5 @@
-# Numero de tarea
-Tarea 2: Agregar home, contact us, about us
+# Desafio ABC Parte 2
+Agregar home, contact us, about us
 
 ## Integrantes
 - Aaron Guerra
